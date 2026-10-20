@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Controller::addSensor(unique_ptr<Sensor> sensor) {sensors.push_back(std::move(sensor));}
+void Controller::addSensor(unique_ptr<Sensor> sensor) {sensors.push_back(move(sensor));}
 void Controller::registerProfile(shared_ptr<Profile> profile) {profileCatalog.push_back(profile);}
 
 shared_ptr<Profile> Controller::findProfile(const string &model) const {
