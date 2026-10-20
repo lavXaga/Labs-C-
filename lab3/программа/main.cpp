@@ -54,7 +54,7 @@ int main() {
     }
 
     History histCopy = controller.getSensor(0)->getHistory();
-    History histMoved = std::move(histCopy);
+    History histMoved = move(histCopy);
 
 
     processByValue(histMoved);
